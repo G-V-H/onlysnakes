@@ -66,3 +66,5 @@ gem "faker", "~> 2.11"
 gem "snake_names", "~> 0.0.0"
 
 gem "devise", "~> 4.7"
+
+gem "aws-sdk-s3", "~> 1.63"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "/", to: "pages#home", as: "root"
@@ -9,8 +10,10 @@ Rails.application.routes.draw do
   get "/listings/:id", to: "listings#show", as: "listing"
   put "/listings/:id", to: "listings#update"
   patch "/listings/:id", to: "listings#update"
-  delete "/listings/:id", to: "listings#destroy"
+  delete "/listings/:id", to: "listings#destroy", as: "destroy_listing"
   get "/listings/:id/edit", to: "listings#edit", as: "edit_listing"
 
-  get "*path", to: "pages#not_found"
+  # get "*path", to: "pages#not_found"
+
+  
 end
